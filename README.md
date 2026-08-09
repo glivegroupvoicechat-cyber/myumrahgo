@@ -1,53 +1,66 @@
 # MyUmrahGo
 
-**A premium B2C + B2B Umrah travel platform.**
+**Premium B2C + B2B Umrah travel platform.**
 
-MyUmrahGo is being built as a mobile-first experience that combines premium travel storytelling, UGC-inspired discovery, transparent package presentation, and a professional B2B partner workspace.
+MyUmrahGo is being built as a mobile-first Umrah marketplace and partner platform: emotionally engaging on the consumer side, operationally powerful on the B2B side, and designed to scale into live inventory, booking, payments and support.
 
-## Current build
+## Product experience
 
 ### B2C
-- Premium landing page
-- UGC-inspired visual direction
-- Package discovery cards
-- Package detail experience
+- Premium, UGC-inspired landing experience
+- Package discovery and comparison direction
+- Makkah + Madinah journey storytelling
+- Package detail and traveller selection
 - Build-your-own-Umrah direction
-- Responsive/mobile-first UI
-- Interactive save and navigation controls
+- Booking/enquiry journey
+- Trust, transparency and human-support messaging
+- Responsive mobile-first UI
 
 ### B2B
-- Partner dashboard UI foundation
-- Agent-focused navigation
+- Partner dashboard foundation
+- Agency navigation and operational workspace
 - Package builder direction
-- Hotel/flight inventory direction
-- Booking, voucher, wallet and support areas
+- Hotel and flight inventory areas
+- Booking management
+- Vouchers
+- Wallet/top-up
+- Support
 
-## Repository structure
+## Architecture roadmap
+
+**Stage 1 — Experience:** static, responsive frontend and design system.
+
+**Stage 2 — Application:** componentized frontend, shared package data model, forms, validation and client state.
+
+**Stage 3 — Backend:** secure authentication, agency roles, users, packages, hotels, flights, bookings, payments, vouchers and audit logs.
+
+**Stage 4 — Integrations:** hotel/flight/visa inventory providers, payment gateway, WhatsApp/SMS/email notifications and document generation.
+
+**Stage 5 — Production:** security review, performance, observability, backups, QA, Hostinger deployment and custom domain.
+
+## Repository
 
 ```text
 /
-├── index.html
-├── styles.css
-├── app.js
+├── index.html              # B2C homepage
+├── styles.css              # Shared visual system
+├── app.js                  # B2C interactions
 ├── pages/
-│   ├── package.html
-│   └── b2b.html
+│   ├── package.html        # Package details / enquiry UI
+│   └── b2b.html            # Partner portal foundation
 ├── PROJECT_STATUS.md
-└── DEPLOYMENT.md
+├── DEPLOYMENT.md
+└── README.md
 ```
 
-## Development roadmap
+## Production rules
 
-1. **B2C UX** — discovery, package details and booking/enquiry flow.
-2. **B2B UX** — agent login, dashboard, package builder, inventory and booking management.
-3. **Backend** — authentication, database, roles, inventory and booking state.
-4. **Integrations** — flights, hotels, visas, payments and notifications.
-5. **Production** — security, QA, performance, Hostinger and MyUmrahGo.com.
+- Demo prices and inventory are **not live availability**.
+- No API keys, passwords, payment secrets or database credentials belong in this repository.
+- All booking, pricing, availability and payment decisions must be validated server-side before production.
+- B2B permissions must be enforced server-side; hiding UI controls is not security.
+- Customer and agency data must be stored and processed through authenticated backend services.
 
-## Important
+## Hostinger
 
-The current package prices and inventory are demonstration data. They must not be treated as live availability until connected to the production backend/inventory sources.
-
-Never commit API keys, passwords, payment secrets or database credentials.
-
-See [`DEPLOYMENT.md`](DEPLOYMENT.md) for the Hostinger deployment path.
+The current frontend is intentionally deployable as a static site. Hostinger can serve the B2C/B2B UI while the production backend is introduced separately. See `DEPLOYMENT.md` for the deployment path.
