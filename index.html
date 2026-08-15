@@ -1,62 +1,72 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="MyUmrahGo — discover a better way to plan your Umrah journey with curated packages, hotels and flights." />
-  <meta name="theme-color" content="#171815" />
-  <meta property="og:title" content="MyUmrahGo — Your Umrah, Your Way" />
-  <meta property="og:description" content="Discover curated Umrah journeys for individuals, families and travel partners." />
-  <meta property="og:type" content="website" />
-  <link rel="manifest" href="site.webmanifest" />
-  <link rel="canonical" href="https://myumrahgo.com/" />
-  <title>MyUmrahGo — Your Umrah, Your Way</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="MyUmrahGo — the complete digital operating platform for Umrah travel agencies.">
+  <meta name="theme-color" content="#0c1930">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="canonical" href="https://myumrahgo.com/">
+  <title>MyUmrahGo — Umrah Travel Operating Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="nav">
+  <header class="nav" id="top">
     <a class="brand" href="#top" aria-label="MyUmrahGo home"><span class="brand-mark">✦</span><span>MyUmrah<span>Go</span></span></a>
     <nav class="nav-links" aria-label="Main navigation">
-      <a href="#packages">Packages</a><a href="#journey">Your Journey</a><a href="#trust">Why Us</a>
+      <a href="#platform">Platform</a><a href="#packages">Packages</a><a href="#b2b">B2B Agents</a><a href="#support">Support</a>
     </nav>
-    <div class="nav-actions"><button class="ghost" id="b2bBtn" type="button">B2B Partners</button><a class="pill" href="#packages">Explore Umrah</a></div>
+    <div class="nav-actions"><a class="ghost" href="pages/b2b-login.html">Agent Login</a><a class="pill" href="pages/b2b.html">Join as Agent</a></div>
   </header>
 
-  <main id="top">
+  <main>
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <div class="eyebrow"><span class="live-dot"></span> Umrah journeys, made beautifully simple</div>
-        <h1 id="hero-title">Your journey to<br /><em>the House of Allah</em><br />starts here.</h1>
-        <p class="hero-text">Discover hand-picked Umrah packages, hotels and flights — with the freedom to find a journey that feels right for you.</p>
-        <div class="hero-actions"><a class="primary" href="#packages">Find my package <span>→</span></a><a class="watch" href="#journey"><span class="play">▶</span> See how it works</a></div>
-        <div class="micro-trust"><span>✦</span> Transparent packages <span>•</span> Human support <span>•</span> Built for pilgrims</div>
+        <span class="eyebrow">MYUMRAHGO.COM · B2B UMRAH + TRAVEL OPERATING PLATFORM</span>
+        <h1 id="hero-title">One workspace to<br><em>run Umrah travel.</em></h1>
+        <p class="hero-text">Build packages, quote clients, invoice, collect payments, submit bookings, manage documents, issue vouchers and create branded marketing — from one secure agency workspace.</p>
+        <div class="hero-actions"><a class="primary" href="pages/b2b.html">Open Agent Workspace <span>→</span></a><a class="watch" href="#platform"><span class="play">▶</span> Explore the platform</a></div>
+        <div class="micro-trust"><span>✦</span> B2B-first <span>•</span> White-label ready <span>•</span> Built for operations</div>
       </div>
-      <div class="hero-visual">
-        <div class="hero-image" role="img" aria-label="Pilgrims in Makkah"><div class="image-overlay"></div><div class="location-tag">📍 Makkah · Saudi Arabia</div><div class="story-card"><span class="avatar">M</span><div><strong>“The easiest Umrah we’ve planned.”</strong><small>— Ayesha & family · Lahore</small></div><span class="stars">★★★★★</span></div></div>
-        <div class="float-chip chip-one">✦ 4.9/5 pilgrim rating</div><div class="float-chip chip-two">🕋 2 cities · 1 beautiful journey</div>
+      <div class="hero-visual" aria-label="MyUmrahGo platform overview">
+        <div class="hero-image"><div class="image-overlay"></div><div class="location-tag">🕋 Makkah · Madinah · Pakistan</div>
+          <div class="dashboard-card"><div class="dash-top"><span>AGENCY WORKSPACE</span><span class="live">● LIVE</span></div><div class="dash-kpis"><div><small>Pending Bookings</small><strong>18</strong></div><div><small>Quotes</small><strong>42</strong></div><div><small>Balance</small><strong>PKR 1.84M</strong></div></div><div class="dash-flow"><span>Build</span><b>→</b><span>Quote</span><b>→</b><span>Book</span><b>→</b><span>Track</span></div></div>
+        </div>
+        <div class="float-chip chip-one">✦ White-label quotations</div><div class="float-chip chip-two">🔐 Agency-isolated data</div>
       </div>
     </section>
 
-    <section class="discovery" id="packages" aria-labelledby="packages-title">
-      <div class="section-head"><div><span class="section-kicker">DISCOVER YOUR JOURNEY</span><h2 id="packages-title">What kind of Umrah<br /><em>feels like you?</em></h2></div><a href="#packages" class="text-link">View all packages →</a></div>
+    <section class="platform" id="platform" aria-labelledby="platform-title">
+      <div class="section-head"><div><span class="section-kicker">ONE OPERATING SYSTEM</span><h2 id="platform-title">Everything an agency needs,<br><em>connected.</em></h2></div><span class="section-note">Built modularly so new services and APIs can be added without rebuilding the foundation.</span></div>
+      <div class="module-grid">
+        <article><span class="module-icon">01</span><h3>Package Engine</h3><p>Multi-step package builder with flight, visa, hotel, transport, ziyarat, margin and final price.</p><a href="pages/package.html">Explore builder →</a></article>
+        <article><span class="module-icon">02</span><h3>Booking Center</h3><p>Universal requests, processing queues, approvals, cancellations, status history and issued documents.</p><a href="pages/b2b.html">Open workflow →</a></article>
+        <article><span class="module-icon">03</span><h3>Finance Engine</h3><p>Invoices, payment proofs, receipts, ledgers, adjustments and controlled financial history.</p><a href="pages/b2b.html">View finance →</a></article>
+        <article><span class="module-icon">04</span><h3>White-label Studio</h3><p>Agency branding across quotations, invoices, vouchers and marketing creatives.</p><a href="pages/b2b.html">View branding →</a></article>
+      </div>
+    </section>
+
+    <section class="packages" id="packages" aria-labelledby="packages-title">
+      <div class="section-head"><div><span class="section-kicker">PUBLIC EXPERIENCE</span><h2 id="packages-title">Discover your next<br><em>Umrah journey.</em></h2></div><a href="pages/package.html" class="text-link">Explore packages →</a></div>
       <div class="cards">
-        <article class="package-card featured"><div class="card-photo makkah"><span class="badge">Most loved</span><button class="save" type="button" aria-label="Save Classic Makkah and Madinah package">♡</button></div><div class="card-body"><div class="card-meta"><span>20 Nights</span><span>✦ Premium</span></div><h3>Classic Makkah & Madinah</h3><p>12 nights Makkah · 8 nights Madinah</p><div class="price"><small>From</small><strong>PKR 249,000</strong><span>/ person</span></div><button class="card-cta" type="button">Explore package →</button></div></article>
-        <article class="package-card"><div class="card-photo madinah"><span class="badge quiet">Family favourite</span><button class="save" type="button" aria-label="Save Peaceful Family Escape package">♡</button></div><div class="card-body"><div class="card-meta"><span>15 Nights</span><span>✦ Comfort</span></div><h3>Peaceful Family Escape</h3><p>9 nights Makkah · 6 nights Madinah</p><div class="price"><small>From</small><strong>PKR 219,000</strong><span>/ person</span></div><button class="card-cta" type="button">Explore package →</button></div></article>
-        <article class="package-card"><div class="card-photo spiritual"><span class="badge quiet">Flexible</span><button class="save" type="button" aria-label="Save Build Your Own Umrah">♡</button></div><div class="card-body"><div class="card-meta"><span>Custom</span><span>✦ Your way</span></div><h3>Build Your Own Umrah</h3><p>Choose your hotels, nights & flights</p><div class="price"><small>Starting from</small><strong>Build & discover</strong></div><button class="card-cta" type="button">Build my package →</button></div></article>
+        <article class="package-card featured"><div class="card-photo makkah"><span class="badge">Popular</span></div><div class="card-body"><div class="card-meta"><span>20 Nights</span><span>✦ Premium</span></div><h3>Classic Makkah & Madinah</h3><p>12 nights Makkah · 8 nights Madinah</p><div class="price"><small>Indicative from</small><strong>PKR 249,000</strong><span>/ person</span></div><a class="card-cta" href="pages/package.html">Explore package →</a></div></article>
+        <article class="package-card"><div class="card-photo madinah"><span class="badge quiet">Family</span></div><div class="card-body"><div class="card-meta"><span>15 Nights</span><span>✦ Comfort</span></div><h3>Peaceful Family Escape</h3><p>9 nights Makkah · 6 nights Madinah</p><div class="price"><small>Indicative from</small><strong>PKR 219,000</strong><span>/ person</span></div><a class="card-cta" href="pages/package.html">Explore package →</a></div></article>
+        <article class="package-card"><div class="card-photo custom"><span class="badge quiet">Flexible</span></div><div class="card-body"><div class="card-meta"><span>Custom</span><span>✦ Your rules</span></div><h3>Build Your Own Umrah</h3><p>Select flights, visa, hotels, transport and add-ons.</p><div class="price"><small>For agents</small><strong>Build & quote</strong></div><a class="card-cta" href="pages/b2b.html">Open builder →</a></div></article>
       </div>
     </section>
 
-    <section class="story" id="journey" aria-labelledby="journey-title">
-      <div class="story-visual"><div class="vertical-label">YOUR JOURNEY · MYUMRAHGO</div><div class="story-stat"><strong>01</strong><span>Choose what<br />matters to you.</span></div></div>
-      <div class="story-copy"><span class="section-kicker">NOT JUST A BOOKING</span><h2 id="journey-title">Less searching.<br /><em>More feeling.</em></h2><p>We believe planning Umrah should give you excitement, not endless tabs and confusing options. MyUmrahGo brings the important pieces together so you can focus on the reason you’re going.</p><div class="steps"><div><b>01</b><span><strong>Discover</strong>Explore real packages and stays.</span></div><div><b>02</b><span><strong>Choose</strong>Compare what fits your family.</span></div><div><b>03</b><span><strong>Go</strong>We help with the rest.</span></div></div><a class="primary dark" href="#packages">Start exploring <span>→</span></a></div>
+    <section class="b2b" id="b2b" aria-labelledby="b2b-title">
+      <div class="b2b-visual"><div class="vertical-label">B2B AGENT PORTAL · MYUMRAHGO</div><div class="stat-card"><strong>01</strong><span>Register → Approve →<br>Operate</span></div></div>
+      <div class="b2b-copy"><span class="section-kicker">FOR TRAVEL AGENCIES</span><h2 id="b2b-title">Turn your daily operations into<br><em>one secure workflow.</em></h2><p>Approved agents get a dedicated workspace for package building, customer CRM, quotations, invoices, payments, bookings, documents, vouchers, marketing and reporting.</p><div class="steps"><div><b>01</b><span><strong>Build</strong>Choose inventory and create a package.</span></div><div><b>02</b><span><strong>Quote</strong>Apply margin and generate your branded quotation.</span></div><div><b>03</b><span><strong>Book</strong>Convert the package into a controlled booking request.</span></div><div><b>04</b><span><strong>Track</strong>Follow every status and issued document.</span></div></div><a class="primary dark" href="pages/b2b-login.html">Agent Login <span>→</span></a></div>
     </section>
 
-    <section class="trust" id="trust" aria-labelledby="trust-title"><div class="trust-intro"><div><span class="section-kicker">PEACE OF MIND</span><h2 id="trust-title">Built around<br /><em>your trust.</em></h2></div></div><div class="trust-grid"><div><span>01</span><h3>Clear pricing</h3><p>No mystery maths. See what your package includes.</p></div><div><span>02</span><h3>Human support</h3><p>Real people when you need help before or during your journey.</p></div><div><span>03</span><h3>Curated stays</h3><p>Hotels selected for location, comfort and pilgrim experience.</p></div></div></section>
+    <section class="security" id="support" aria-labelledby="security-title"><div><span class="section-kicker">TRUST + CONTROL</span><h2 id="security-title">Built for serious<br><em>travel operations.</em></h2></div><div class="security-grid"><div><span>01</span><h3>Granular roles</h3><p>Admin and agency permissions are separated by actual authority.</p></div><div><span>02</span><h3>Agency isolation</h3><p>An agency sees only its permitted customers, bookings, finance and documents.</p></div><div><span>03</span><h3>Audit trail</h3><p>Important financial, booking and document actions are recorded.</p></div><div><span>04</span><h3>Private files</h3><p>Passports, tickets and vouchers use controlled server-side access.</p></div></div></section>
   </main>
-  <footer><div class="brand"><span class="brand-mark">✦</span><span>MyUmrah<span>Go</span></span></div><p>Made for the journey that matters.</p><span>© 2026 MyUmrahGo</span></footer>
+
+  <footer><div class="brand"><span class="brand-mark">✦</span><span>MyUmrah<span>Go</span></span></div><p>Build · Quote · Book · Process · Issue · Track · Market · Report</p><span>© 2026 MyUmrahGo</span></footer>
   <script src="app.js"></script>
 </body>
 </html>
