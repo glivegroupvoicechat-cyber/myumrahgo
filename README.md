@@ -1,66 +1,106 @@
-# MyUmrahGo
+# MyUmrahGo.com
 
-**Premium B2C + B2B Umrah travel platform.**
+**B2B Umrah + Travel Operating Platform**
 
-MyUmrahGo is being built as a mobile-first Umrah marketplace and partner platform: emotionally engaging on the consumer side, operationally powerful on the B2B side, and designed to scale into live inventory, booking, payments and support.
+MyUmrahGo is being rebuilt from the Master Product Roadmap into a modular production platform for travel agencies.
 
-## Product experience
+## Product mission
 
-### B2C
-- Premium, UGC-inspired landing experience
-- Package discovery and comparison direction
-- Makkah + Madinah journey storytelling
-- Package detail and traveller selection
-- Build-your-own-Umrah direction
-- Booking/enquiry journey
-- Trust, transparency and human-support messaging
-- Responsive mobile-first UI
+One secure workspace for an agency to:
 
-### B2B
-- Partner dashboard foundation
-- Agency navigation and operational workspace
-- Package builder direction
-- Hotel and flight inventory areas
-- Booking management
-- Vouchers
-- Wallet/top-up
-- Support
+**Build → Quote → Invoice → Collect → Book → Process → Issue → Track → Market → Report**
 
-## Architecture roadmap
+## Rebuild scope
 
-**Stage 1 — Experience:** static, responsive frontend and design system.
+### Public website
+- Premium modern landing experience
+- Hero section and visual storytelling
+- Product/packages/content
+- B2B signup and login
+- Support and public CMS content
+- Responsive UI
 
-**Stage 2 — Application:** componentized frontend, shared package data model, forms, validation and client state.
+### B2B agent portal
+- Dashboard
+- Agency profile and white-label branding
+- Package builder with autosave
+- Inventory browsers
+- CRM and passenger records
+- Quotations / invoices / payments / ledgers
+- Booking center and status tracking
+- Secure documents and vouchers
+- Marketing Studio
+- Notifications, support and reports
+- Staff/role management
 
-**Stage 3 — Backend:** secure authentication, agency roles, users, packages, hotels, flights, bookings, payments, vouchers and audit logs.
+### Admin control panel
+- KPIs and operational queues
+- Agent onboarding and approvals
+- Staff, roles and granular permissions
+- Flight / visa / hotel / transport / ziyarat inventory
+- Package/pricing rules
+- Booking processing
+- Payments, ledgers and financial controls
+- Documents and vouchers
+- Notifications and templates
+- Reports/export
+- CMS
+- Audit logs
+- System settings
+- Backup/restore monitoring
 
-**Stage 4 — Integrations:** hotel/flight/visa inventory providers, payment gateway, WhatsApp/SMS/email notifications and document generation.
-
-**Stage 5 — Production:** security review, performance, observability, backups, QA, Hostinger deployment and custom domain.
-
-## Repository
+## Architecture
 
 ```text
-/
-├── index.html              # B2C homepage
-├── styles.css              # Shared visual system
-├── app.js                  # B2C interactions
-├── pages/
-│   ├── package.html        # Package details / enquiry UI
-│   └── b2b.html            # Partner portal foundation
-├── PROJECT_STATUS.md
-├── DEPLOYMENT.md
-└── README.md
+Public UI / B2B UI / Admin UI
+            |
+       PHP Application API
+            |
+          MySQL
+       /           \
+Private Files      Audit Logs
+       |
+Scheduler / Jobs / Notifications
 ```
 
-## Production rules
+The production database is authoritative. Sensitive customer documents stay in private storage and are accessed only through authorized server-side routes.
 
-- Demo prices and inventory are **not live availability**.
-- No API keys, passwords, payment secrets or database credentials belong in this repository.
-- All booking, pricing, availability and payment decisions must be validated server-side before production.
-- B2B permissions must be enforced server-side; hiding UI controls is not security.
-- Customer and agency data must be stored and processed through authenticated backend services.
+## Development branch
 
-## Hostinger
+The current implementation work is on:
 
-The current frontend is intentionally deployable as a static site. Hostinger can serve the B2C/B2B UI while the production backend is introduced separately. See `DEPLOYMENT.md` for the deployment path.
+`rebuild/master-roadmap-v1`
+
+The original `main` branch remains preserved as the previous implementation.
+
+## Current rebuild assets
+
+- `docs/MASTER_ROADMAP_IMPLEMENTATION.md` — roadmap-to-engineering translation
+- `database/master_schema_v2.sql` — roadmap-aligned database foundation
+
+## Build sequence
+
+1. Foundation + authentication + permissions
+2. Admin and agency shells
+3. Inventory
+4. Package engine
+5. Quotations / CRM / secure documents
+6. Booking workflows
+7. Finance
+8. Marketing Studio
+9. Notifications / automation
+10. Growth integrations
+
+## Security baseline
+
+- Strong password/session controls
+- Role-based authorization
+- Agency-level data isolation
+- Private document storage
+- Server-side validation
+- Audit logging
+- Backup/restore process
+- Supplier/net-rate protection
+- Admin access protection
+
+See `docs/MASTER_ROADMAP_IMPLEMENTATION.md` for the complete implementation baseline.
