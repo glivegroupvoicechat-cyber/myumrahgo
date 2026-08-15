@@ -1,0 +1,26 @@
+/* MyUmrahGo visual enhancement layer: light premium UI + interactive depth */
+:root{--enh-ink:#172238;--enh-navy:#132742;--enh-blue:#477aa8;--enh-gold:#c8a45b;--enh-cream:#f8f2e5;--enh-line:#e5dfd2;--enh-shadow:0 28px 80px rgba(31,48,72,.13)}
+body{background:linear-gradient(180deg,#fffdf8 0%,#fbfaf6 100%)}
+.nav{box-shadow:0 8px 30px rgba(22,34,56,.035)}
+.nav-links a,.ghost{transition:color .2s,transform .2s}.nav-links a:hover,.ghost:hover{color:var(--enh-gold);transform:translateY(-1px)}
+.pill,.primary,.card-cta{position:relative;overflow:hidden}.pill:before,.primary:before,.card-cta:before{content:"";position:absolute;inset:0;transform:translateX(-110%);background:linear-gradient(100deg,transparent,rgba(255,255,255,.22),transparent);transition:transform .6s}.pill:hover:before,.primary:hover:before,.card-cta:hover:before{transform:translateX(110%)}
+.hero{background:radial-gradient(circle at 78% 20%,rgba(200,164,91,.13),transparent 25%),linear-gradient(135deg,#fffdf8 0%,#f5f0e4 52%,#edf5f7 100%)}
+.hero-copy{animation:heroIn .8s ease both}.hero-scene{animation:heroSceneIn 1s .1s ease both}.scene-card{transform:rotateY(-5deg) rotateX(2deg);transition:transform .18s ease-out,box-shadow .3s}.scene-card:hover{box-shadow:40px 45px 100px rgba(21,39,62,.30)}
+.kaaba-art{transform-style:preserve-3d}.cube{animation:floatCube 5s ease-in-out infinite;transform-style:preserve-3d}.arch{animation:softFloat 4s ease-in-out infinite}
+.float-card{animation:floatChip 4.5s ease-in-out infinite}.fc-two{animation-delay:-2s}
+.quick-links a{position:relative}.quick-links a:after{content:"";position:absolute;left:18px;right:18px;bottom:0;height:2px;background:linear-gradient(90deg,var(--enh-gold),transparent);transform:scaleX(0);transform-origin:left;transition:.3s}.quick-links a:hover:after{transform:scaleX(1)}
+.promo{background:linear-gradient(120deg,#315b86,#18314f 62%,#12233d);border:1px solid rgba(255,255,255,.15)}
+.package-card,.feature-grid a,.trust-grid>div{will-change:transform}.package-card:hover,.feature-grid a:hover,.trust-grid>div:hover{border-color:#d5bf91}
+.card-photo{overflow:hidden}.card-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 20%,rgba(255,255,255,.15) 48%,transparent 70%);transform:translateX(-110%);transition:.8s}.package-card:hover .card-photo:after{transform:translateX(110%)}
+.badge{box-shadow:0 8px 20px rgba(20,35,61,.12)}.save{transition:.2s}.save:hover{transform:scale(1.08);background:#fff8e7}
+.section-split{box-shadow:0 25px 70px rgba(25,42,64,.08)}
+.feature-grid a{min-height:245px}.feature-grid a:before{content:"";position:absolute;inset:-70px auto auto -70px;width:170px;height:170px;border-radius:50%;background:radial-gradient(circle,rgba(71,122,168,.10),transparent 70%)}
+.stats{background:linear-gradient(100deg,#fff,#f7f1e4)}.stats strong{color:#9e7b38}.stats div{transition:.25s}.stats div:hover{background:#fffaf0}
+.about-banner,.cta{background:linear-gradient(120deg,#1b3657,#315f89);position:relative;overflow:hidden}.about-banner:after,.cta:after{content:"";position:absolute;width:430px;height:430px;border:1px solid rgba(255,255,255,.10);border-radius:50%;right:-170px;top:-170px;box-shadow:0 0 0 35px rgba(255,255,255,.025),0 0 0 70px rgba(255,255,255,.018)}
+footer{background:#14233a}
+.reveal-ready{filter:blur(2px)}.reveal-ready.is-visible{filter:none}
+.toast{border:1px solid rgba(255,255,255,.12)}
+@keyframes heroIn{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}@keyframes heroSceneIn{from{opacity:0;transform:translateX(30px) scale(.97)}to{opacity:1;transform:none}}@keyframes floatCube{0%,100%{transform:rotateX(55deg) rotateZ(45deg) translateY(0)}50%{transform:rotateX(55deg) rotateZ(45deg) translateY(-12px)}}@keyframes softFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}@keyframes floatChip{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@media(max-width:1000px){.hero-scene{min-height:520px}.scene-card{transform:none}.float-card{transform:none}.fc-one{left:5px}.fc-two{right:5px}}
+@media(max-width:620px){.hero-scene{min-height:450px}.scene-card{width:100%;height:420px}.float-card{font-size:8px}.quick-links a:after{left:12px;right:12px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
